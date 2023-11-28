@@ -13,30 +13,31 @@ const TodayWeatherAirConditions = ({ data }) => {
     content = (
       <>
         <AirConditionsItem
-          title="Real Feel"
-          value={`${Math.round(data.main.feels_like)} °C`}
+          title="অনুভৃত হচ্ছে"
+          value={`${getBengaliNumber(Math.round(data.main.feels_like))} °C`}
           type="temperature"
         />
         <AirConditionsItem
-          title="Wind"
-          value={`${data.wind.speed} m/s`}
+          title="বায়ুর গতি "
+          value={`${getBengaliNumber(data.wind.speed)} মি./সে.`}
           type="wind"
         />
         <AirConditionsItem
-          title="Clouds"
-          value={`${Math.round(data.clouds.all)} %`}
+          title="মেঘাচ্ছনতা"
+          value={`${getBengaliNumber(Math.round(data.clouds.all))} %`}
           type="clouds"
         />
         <AirConditionsItem
-          title="Humidity"
-          value={`${Math.round(data.main.humidity)} %`}
+          title="আর্দ্রতা"
+          value={`${getBengaliNumber(Math.round(data.main.humidity))} %`}
           type="humidity"
         />
       </>
     );
+
   return (
     <Layout
-      title="AIR CONDITIONS"
+      title="বিস্তারিত"
       content={content}
       mb="1rem"
       sx={{ marginTop: '2.9rem' }}
@@ -44,4 +45,33 @@ const TodayWeatherAirConditions = ({ data }) => {
   );
 };
 
+const getBengaliNumber = (number) => {
+  switch (number) {
+    case 0:
+      return '০';
+    case 1:
+      return '১';
+    case 2:
+      return '২';
+    case 3:
+      return '৩';
+    case 4:
+      return '৪';
+    case 5:
+      return '৫';
+    case 6:
+      return '৬';
+    case 7:
+      return '৭';
+    case 8:
+      return '৮';
+    case 9:
+      return '৯';
+    default:
+      return number.toString();
+  }
+};
+
+
 export default TodayWeatherAirConditions;
+
