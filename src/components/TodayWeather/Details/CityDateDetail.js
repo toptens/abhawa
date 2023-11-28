@@ -39,7 +39,7 @@ const CityDateDetail = (props) => {
           fontFamily: 'Roboto Condensed',
         }}
       >
-        Today {props.date}
+        আজ {props.date}
       </Typography>
     </Box>
   );
