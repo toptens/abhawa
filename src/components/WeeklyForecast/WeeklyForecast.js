@@ -127,7 +127,7 @@ const WeeklyForecast = ({ data }) => {
 
   return (
     <Layout
-      title="WEEKLY FORECAST"
+      title="সাপ্তাহিক পূর্বাভাস"
       content={content}
       mb=".8rem"
       sx={{
