@@ -90,8 +90,7 @@ function App() {
           lineHeight: '22px',
         }}
       >
-        Explore current weather data and 6-day forecast of more than 200,000
-        cities!
+        এই মুহুর্তের আবহাওয়া সহ আগামী ৬ দিনের আবহাওয়ার খবর পান বাংলা ভাষায়! 
       </Typography>
     </Box>
   );
@@ -116,7 +115,7 @@ function App() {
       <ErrorBox
         margin="3rem auto"
         flex="inherit"
-        errorMessage="Something went wrong"
+        errorMessage="আবার চেষ্টা করুন"
       />
     );
   }
@@ -143,7 +142,7 @@ function App() {
               fontFamily: 'Poppins',
             }}
           >
-            Loading...
+            লোড হচ্ছে... 
           </Typography>
         </LoadingBox>
       </Box>
@@ -192,7 +191,7 @@ function App() {
 
             <UTCDatetime />
             <Link
-              href="https://github.com/Amin-Awinti"
+              href="https://www.abhawa.com"
               target="_blank"
               underline="none"
               sx={{ display: 'flex' }}
