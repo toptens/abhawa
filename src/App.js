@@ -190,7 +190,21 @@ function App() {
             />
 
             <UTCDatetime />
-      </Box>
+            <Link
+              href="https://www.abhawa.com"
+              target="_blank"
+              underline="none"
+              sx={{ display: 'flex' }}
+            >
+              <GitHubIcon
+                sx={{
+                  fontSize: { xs: '20px', sm: '22px', md: '26px' },
+                  color: 'white',
+                  '&:hover': { color: '#2d95bd' },
+                }}
+              />
+            </Link>
+          </Box>
           <Search onSearchChange={searchChangeHandler} />
         </Grid>
         {appContent}
