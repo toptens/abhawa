@@ -18,14 +18,14 @@ export function getDayMonthFromDate() {
 }
 
 export function transformDateFormat() {
-  const month = date.toLocaleString('bn-BD', { month: '2-digit' });
-  const day = date.toLocaleString('bn-BD', { day: '2-digit' });
+  const month = date.toLocaleString('en-US', { month: '2-digit' });
+  const day = date.toLocaleString('en-US', { day: '2-digit' });
   const year = date.getFullYear();
-  const time = date.toLocaleString('bn-BD', {
+  const time = date.toLocaleString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hourCycle: 'h12',
+    hourCycle: 'h23',
   });
 
   const newFormatDate = year.toString().concat('-', month, '-', day, ' ', time);
@@ -33,11 +33,11 @@ export function transformDateFormat() {
 }
 
 export function getUTCDatetime() {
-  const utcTime = date.toLocaleString('bn-BD', {
+  const utcTime = date.toLocaleString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'UTC+6',
+    timeZone: 'UTC',
   });
 
   const isoDateString = new Date().toISOString();
@@ -46,12 +46,12 @@ export function getUTCDatetime() {
 }
 
 export function getUTCTime() {
-  const utcTime = date.toLocaleString('bn-BD', {
+  const utcTime = date.toLocaleString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hourCycle: 'h12',
-    timeZone: 'UTC+6',
+    hourCycle: 'h23',
+    timeZone: 'UTC',
   });
 
   return utcTime;
